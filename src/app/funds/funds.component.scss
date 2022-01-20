@@ -1,0 +1,117 @@
+
+
+#text{
+    font-weight: 900;
+    font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+}
+a { 
+    // text-decoration: none; 
+    color: rgb(73, 14, 235);
+}
+
+
+
+
+ 
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid rgb(255, 23, 23);
+    th { 
+        text-decoration: underline;
+        color: white; 
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: rgb(0, 0, 0);
+     }
+  }
+
+      
+
+
+
+   tr:last-child {
+    border-bottom: none;
+   }
+
+   td:nth-child(n), th:nth-child(n) {
+    border-left: solid 2px rgb(228, 10, 10);
+   }
+
+   tr:nth-child(n) {
+    border-bottom: solid 2px green;
+   }
+
+   tr:nth-child(1), th:nth-child(1) { width: 30px; }
+   tr:nth-child(2), th:nth-child(2) { width: 60px; }
+   tr:nth-child(3), th:nth-child(3) { width: 150px; }
+   tr:nth-child(4), th:nth-child(4) { width: 150px; }
+   tr:nth-child(5), th:nth-child(5) { width: 110px; }
+   tr:nth-child(6), th:nth-child(6) { width: 110px; }
+   tr:nth-child(7), th:nth-child(7) { width: 110px; }
+   tr:nth-child(8), th:nth-child(8) { width: 150px; }
+   tr:nth-child(9), th:nth-child(9) { width: 60px; }
+   tr:nth-child(10), th:nth-child(10) { width: 75px; }
+   tr:nth-child(11), th:nth-child(11) { width: 60px; }
+   tr:nth-child(12), th:nth-child(12) { width: 60px; }
+   tr:nth-child(13), th:nth-child(13) { width: 60px; }
+   
+
+  th, td {
+    padding: 4px;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+
+  }
+  
+  table {
+    background-color: #ffffffbd;
+  }
+
+// #wrapper
+// {
+//  margin:0 auto;
+//  padding:0px;
+//  text-align:center;
+//  height: 35px;
+//  width:55px;	
+// }
+// #wrapper h1
+// {
+//  margin-top:50px;
+//  font-size:45px;
+//  color:#34495E;
+// }
+// #wrapper h1 p
+// {
+// font-size:18px;
+// }
+// #button_div input[type="button"]
+// {
+//  background-color:none;
+//  width:120px;
+//  height:50px;
+//  margin:20px;
+//  font-size:17px;
+//  color:white;
+//  border:none;
+// }
+
+// #button_div .shadow
+// {
+//  background-color:#d83131;
+//  transition: all 0.35s ease;
+//  border-radius:5px;
+// }
+// #button_div .shadow:hover
+// {
+//  border: 1px solid #B7950B;
+//  background-color:rgb(255, 255, 255);
+//  color:#B7950B;
+//  box-shadow:0px 0px 25px 0px #B7950B;
+// }

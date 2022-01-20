@@ -1,0 +1,101 @@
+<div class="grid-container" id="gridContainer">
+    <table class="info-table">
+        <tr>
+            <th>
+                 ID
+            </th>
+            <th>
+                Symbol
+           </th>
+           <th>
+                Name
+            </th>
+            <th>
+                Inception Date
+            </th>
+            <th>
+                Category1
+            </th>
+            <th>
+                Category2
+            </th>
+            <th>
+                Category3
+            </th>
+            <th>
+                Market Cap
+            </th>
+            <th>
+                Current Dividend Yield
+            </th>
+            <th>
+                Historical Average Divided Yield
+            </th>
+            <th>
+                Leverage Factor
+            </th>
+            <th>
+                Average Volume
+            </th>
+            <th>
+                Action
+            </th>
+           
+        </tr>
+        <tr  *ngFor="let fund of funds">
+            <td>
+                 {{fund.id}}
+            </td>
+            <td>
+                <a [routerLink]="['/funds', fund.id]"> {{fund.symbol}}</a>
+            </td>
+            <td>
+                {{fund.name}}
+            </td>
+            <td>
+                {{fund.inceptionDate}}
+            </td>
+            <td>
+                {{fund.categoryOne}}
+            </td>
+            <td>
+                {{fund.categoryTwo}}
+            </td>
+            <td>
+                {{fund.categoryThree}}
+            </td>
+            <td>
+                {{fund.marketCap}}
+            </td>
+            <td>
+                {{fund.currentDividendYield}}
+            </td>
+            <td>
+                {{fund.historicalAverageDividendYield}}
+            </td>
+            <td>
+                {{fund.everageFactor}}
+            </td>
+            <td>
+                {{fund.averageVolume}}
+            </td>
+            <td>
+                {{fund.action}}
+            </td>
+            
+        </tr>
+    </table>
+
+
+    <!-- <div *ngFor="let fund of funds">
+        
+    
+    <a [routerLink]="['/funds', fund.id]"> {{fund.id}} - {{fund.symbol}}
+        <br>{{fund.name}}
+    </a>
+
+    <div id="button_div">
+    <button (click) = "deleteFunds(fund.id)" id = "wrapper" class="shadow" value="Shadow">delete</button>
+    </div>
+</div> -->
+
