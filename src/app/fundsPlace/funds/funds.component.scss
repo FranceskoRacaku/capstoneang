@@ -10,9 +10,54 @@ a {
 }
 
 
+// header {
+//   background: linear-gradient(to right, rgb(137, 139, 101), rgb(212, 24, 65));
+//   margin: 0;
+//   padding-bottom: 20px;
+//   overflow-x: hidden; 
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   display: flex;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   resize: both;
+  
 
+// }
+// title{
+//   background-color: orange;
+//   color: rgb(27, 3, 3);
+//   align-items: center;
+//   font-size: 72px;
+//   flex-direction: column;
+//   display: flex;
+//   resize: both;
+  
+// }
 
- 
+.imgg{
+  position: relative;   
+   left: 25%;
+   height: 40px;     
+   z-index: 2;
+
+}
+
+#myInput {
+  background-image: url('/assets/searchIcon.png'); 
+  background-position: 10px 12px; /* Position the search icon */
+  min-width: 50%; /* Full-width */
+  position: absolute;
+  z-index: 1;
+  left: 25%;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 2px solid rgb(12, 12, 12); /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
 
 table {
     table-layout: fixed;
@@ -58,6 +103,7 @@ table {
    tr:nth-child(11), th:nth-child(11) { width: 60px; }
    tr:nth-child(12), th:nth-child(12) { width: 60px; }
    tr:nth-child(13), th:nth-child(13) { width: 60px; }
+   tr:nth-child(14), th:nth-child(14) { width: 60px; }
    
 
   th, td {
@@ -73,6 +119,42 @@ table {
     background-color: #ffffffbd;
   }
 
+  #wrapper
+  {
+   padding:0px;
+   text-align:center;
+   height: 30px;
+   width:65px;	
+   color: rgb(236, 17, 17);
+   margin: 0 10px 10px 10px;
+   font-size: 18px;
+   
+  }
+  #wrapper h1
+  {
+   margin-top:50px;
+   font-size:45px;
+   color:#5e4634;
+  }
+  #wrapper h1 p
+  {
+  font-size:18px;
+  }
+
+
+#button_div .shadow
+{
+ background-color:#000000;
+ transition: all 0.35s ease;
+ border-radius:5px;
+}
+#button_div .shadow:hover
+{
+ border: 1px solid #b7110b;
+ background-color:white;
+ color:#B7950B;
+ box-shadow:0px 0px 25px 0px #B7950B;
+}
 // #wrapper
 // {
 //  margin:0 auto;

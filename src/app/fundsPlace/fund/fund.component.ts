@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FundService } from '../fund.service';
+import { FundService } from '../../fund.service';
 import { Fund } from './fund.model';
 
 @Component({
@@ -32,6 +32,6 @@ export class FundComponent implements OnInit {
   }
 
     edit():void {
-      this.router.navigateByUrl(`/loans/${this.fund.id}/edit`);
+      this.router.navigateByUrl(`/funds/${this.fund.id}/edit`);
     }
 }

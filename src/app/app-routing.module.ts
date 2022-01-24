@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { FundComponent } from './fund/fund.component';
-import { FundsComponent } from './funds/funds.component';
-// import { CreateComponent } from './create/create.component';
+import { FundComponent } from './fundsPlace/fund/fund.component';
+import { FundsComponent } from './fundsPlace/funds/funds.component';
+import { CreateFundsComponent } from './fundsPlace/createfunds/createfunds.component';
 import { RouterModule, Routes } from '@angular/router';
-// import { EditFundsComponent } from './editfunds/editfunds.component';
+import { EditFundsComponent } from './fundsPlace/editfunds/editfunds.component';
 
 const routes: Routes = [
   {path: "funds", component: FundsComponent},
-//   {path: "funds/create", component: CreateComponent},
+  {path: "funds/create", component: CreateFundsComponent},
   {path: "funds/:id", component: FundComponent},
-//   {path: "loans/:id/edit", component: EditFundsComponent},
+  {path: "funds/:id/edit", component: EditFundsComponent},
 ];
 
 @NgModule({

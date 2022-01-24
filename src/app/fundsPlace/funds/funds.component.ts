@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Fund } from '../fund/fund.model';
-import { FundService } from '../fund.service';
+import { FundService } from '../../fund.service';
 
 @Component({
   selector: 'app-funds',
@@ -14,6 +14,7 @@ export class FundsComponent implements OnInit {
     private fundService: FundService, 
     private route: ActivatedRoute) { }
 
+  term: string = '';
   funds:Fund[] = [];
 
   ngOnInit(): void {
@@ -32,4 +33,5 @@ export class FundsComponent implements OnInit {
       this.ngOnInit();
       })
     }
-}
+
+ }

@@ -1,0 +1,22 @@
+
+<div class = "center" id = "centerText" id ="text">
+    <!-- ID: <input [(ngModel)] ="fund.id" id ="inputText" type = "text" value = "" placeholder="e.g. (John Smith)"/> -->
+    Symbol: <input [(ngModel)] ="createFund.symbol" id ="inputText" type = "text" value = "" placeholder="e.g. (PHYS)"/>
+    Name: <input [(ngModel)] ="createFund.name" id ="inputText" type = "text" value = "" placeholder="e.g. (Sprott Physical Gold Trust CEF)"/>
+    Inception Date: <input [(ngModel)] ="createFund.inceptionDate" id ="inputText" type = "text" value = "" placeholder="e.g. (2010-02-26)"/>
+    Category One: <input [(ngModel)] ="createFund.categoryOne" id ="inputText" type = "text" value = "" placeholder="e.g. (Commodities)"/>
+    Category Two: <input [(ngModel)] ="createFund.categoryTwo" id ="inputText" type = "text" value = "" placeholder="e.g. (Broad Market)"/>
+    Category Three: <input [(ngModel)] ="createFund.categoryThree" id ="inputText" type = "text" value = "" placeholder="e.g. (Actively Managed)"/>
+    Market Cap: <input [(ngModel)] ="createFund.marketCap" id ="inputText" type = "text" value = "" placeholder="e.g. (4,852,252,666 $)"/>
+    Current Dividend Yield: <input [(ngModel)] ="createFund.currentDividendYield" id ="inputText" type = "text" value = "" placeholder="e.g. (0%)"/>
+    Historical Average Dividend Yield: <input [(ngModel)] ="createFund.historicalAverageDividendYield" id ="inputText" type = "text" value = "" placeholder="e.g. (0%)"/>
+    Leverage Factor: <input [(ngModel)] ="createFund.everageFactor" id ="inputText" type = "number" value = "" placeholder="e.g. (1.0)"/>
+    Average Volume: <input [(ngModel)] ="createFund.averageVolume" id ="inputText" type = "text" value = "" placeholder="e.g. (1,254,234)"/>
+    Action: <input [(ngModel)] ="createFund.action" id ="inputText" type = "text" value = "" placeholder="e.g. (Analyze)"/>
+    
+    
+</div>
+
+<div id="button_div">
+<button (click) = "createFunds(createFund)" id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow">Create</button> 
+</div>
