@@ -33,4 +33,27 @@ export class FundService {
     return this.http.get("https://francs.herokuapp.com/funds/"+id);
 
   }
+
+  // createFund(createFund: any) {
+  //   return this.http.post('http://localhost:3000/funds', createFund);
+  // }
+
+  // deleteFunds(id: any) {
+  //   return this.http.delete(`http://localhost:3000/funds/${id}`, {responseType: 'text'});
+  // }
+
+  // getFunds(): Observable<any> {
+  //   return this.http.get("http://localhost:3000/funds");
+
+  // }
+  // updateFunds(fund: Fund): Observable<any>{
+    
+  //   return this.http.patch(`http://localhost:3000/funds/${fund.id}`, fund);
+  // }
+
+
+  // getFund(id: number): Observable<any> {
+  //   return this.http.get("http://localhost:3000/funds/"+id);
+
+  // }
 }

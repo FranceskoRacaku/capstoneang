@@ -9,17 +9,11 @@ header {
     background: linear-gradient(to right, rgb(137, 139, 101), rgb(212, 24, 65));
     margin: 0;
     padding-bottom: 20px;
-    overflow-x: hidden; 
     align-items: center;
     justify-content: center;
     flex-direction: column;
     display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    resize: both;
     
-
 }
 title{
     background-color: orange;
@@ -28,7 +22,7 @@ title{
     font-size: 72px;
     flex-direction: column;
     display: flex;
-    resize: both;
+
     
 }
 h1 {
