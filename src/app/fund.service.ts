@@ -16,7 +16,7 @@ export class FundService {
   }
 
   deleteFunds(id: any) {
-    return this.http.delete(`https://francs.herokuapp.com/funds/${id}`);
+    return this.http.delete(`https://francs.herokuapp.com/funds/${id}`,{responseType: 'text'});
   }
 
   getFunds(): Observable<any> {
