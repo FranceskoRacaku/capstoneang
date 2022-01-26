@@ -1,6 +1,11 @@
+body{
 
+    background: linear-gradient(to right, rgb(137, 139, 101), rgb(212, 24, 65));
+
+}
 .main-bond{
     // background-color: blue;
+    background: linear-gradient(to right, rgb(137, 139, 101), rgb(212, 24, 65));
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -10,7 +15,16 @@
     
     // flex-wrap: inherit;
 }
-
+title{
+    background-color: orange;
+    color: rgb(27, 3, 3);
+    align-items: center;
+    font-size: 72px;
+    flex-direction: column;
+    display: flex;
+    resize: both;
+    
+  }
 .bond-info {
     align-items: center;
     position: relative;
