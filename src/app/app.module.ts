@@ -20,6 +20,7 @@ import { CreateFundsComponent } from './fundsPlace/createfunds/createfunds.compo
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SortDirective } from './directive/sort.directive';
 
+
 @NgModule({
   declarations: [
     AppComponent,
