@@ -1,1 +1,36 @@
-<p>purchase works!</p>
+<body>
+    
+
+
+    <!-- bonds -->
+    <title> Purchases</title>
+    <hr>
+    <div class="main-bond">
+        <!-- main bond -->
+        <div class="bond-info">
+            <!-- bond info  -->
+            <div class="bond-info-right">
+                <img class="image-one"src="./assets/undraw_our_solution_re_8yk6.svg" alt="image">
+                <div class="bond-info-left">
+                    <h3> Purchase History </h3>
+                    <hr>
+                    <p> Id - {{purchase.id}}</p>
+                    <hr>
+                    <p> Amount - {{purchase.amount}}</p>
+                    <hr>
+                    <p> Fund ID - {{purchase.fundId }}</p>
+                    <hr>
+                    <p> User ID - {{purchase.userId}} </p>
+
+                    <button mat-raised-button class="invest-btn" (click) = "edit()">
+                     Edit Purchase
+                     </button>
+                     <button mat-raised-button class="back-btn" routerLink="/purchases">
+                         Go Back
+                     </button>
+                 </div>
+             </div>
+            </div>
+            
+    </div>
+    </body>

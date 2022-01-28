@@ -12,9 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PurchaseComponent } from './purchasesPlace/purchase/purchase.component';
 import { UserComponent } from './usersPlace/user/user.component';
-import { CreateuserComponent } from './usersPlace/createuser/createuser.component';
-import { EdituserComponent } from './usersPlace/edituser/edituser.component';
-import { CreatepurchasesComponent } from './purchasesPlace/createpurchases/createpurchases.component';
+import { CreateUsersComponent } from './usersPlace/createusers/createusers.component';
+import { EditUsersComponent } from './usersPlace/editusers/editusers.component';
+import { CreatePurchasesComponent } from './purchasesPlace/createpurchases/createpurchases.component';
 import { EditFundsComponent } from './fundsPlace/editfunds/editfunds.component';
 import { CreateFundsComponent } from './fundsPlace/createfunds/createfunds.component';
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -30,9 +30,9 @@ import { SortDirective } from './directive/sort.directive';
     FundComponent,
     PurchaseComponent,
     UserComponent,
-    CreateuserComponent,
-    EdituserComponent,
-    CreatepurchasesComponent,
+    CreateUsersComponent,
+    EditUsersComponent,
+    CreatePurchasesComponent,
     EditFundsComponent,
     CreateFundsComponent,
     SortDirective

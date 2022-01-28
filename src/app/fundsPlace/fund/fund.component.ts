@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FundService } from '../../fund.service';
+import { FundService } from '../fund.service';
 import { Fund } from './fund.model';
 
 @Component({

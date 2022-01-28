@@ -1,1 +1,20 @@
-<p>createpurchases works!</p>
+<body>
+    
+
+    <div class ="fundsedit">
+    <div class = "center" id = "centerText" id ="text">
+        
+        <label>Amount: </label>
+        <input [(ngModel)] ="createPurchase.amount" id ="inputText" type = "number" value = "" placeholder="e.g. (255)"/>
+         <label>Fund ID: </label>
+        <input [(ngModel)] ="createPurchase.fundId" id ="inputText" type = "number" value = "" placeholder="e.g. (1)"/>
+        <label>User ID: </label>
+         <input [(ngModel)] ="createPurchase.userId" id ="inputText" type = "number" value = "" placeholder="e.g. (1)"/>
+
+        <div id="button_div">
+    <button (click) = "createPurchases(createPurchase)" id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow">Create</button> 
+    <button id = "wrapper" class="shadow" value="Shadow" routerLink ='/purchases'>Go Back</button>
+    </div>
+    </div>
+    
+    </div></body>

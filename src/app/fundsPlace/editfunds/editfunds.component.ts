@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Fund } from '../fund/fund.model';
-import { FundService } from 'src/app/fund.service';
+import { FundService } from 'src/app/fundsPlace/fund.service';
 
 
 @Component({

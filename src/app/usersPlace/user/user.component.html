@@ -1,1 +1,36 @@
-<p>user works!</p>
+<body>
+    
+
+
+    <!-- bonds -->
+    <title> Users</title>
+    <hr>
+    <div class="main-bond">
+        <!-- main bond -->
+        <div class="bond-info">
+            <!-- bond info  -->
+            <div class="bond-info-right">
+                <img class="image-one"src="./assets/undraw_our_solution_re_8yk6.svg" alt="image">
+                <div class="bond-info-left">
+                    <h3> Purchase History </h3>
+                    <hr>
+                    <p> Id - {{user.id}}</p>
+                    <hr>
+                    <p> Username - {{user.userName}}</p>
+                    <hr>
+                    <p> Email - {{user.userEmail }}</p>
+                    <hr>
+                    <p> Age - {{user.userAge}} </p>
+
+                    <button mat-raised-button class="invest-btn" (click) = "edit()">
+                     Edit Purchase
+                     </button>
+                     <button mat-raised-button class="back-btn" routerLink="/users">
+                         Go Back
+                     </button>
+                 </div>
+             </div>
+            </div>
+            
+    </div>
+    </body>
