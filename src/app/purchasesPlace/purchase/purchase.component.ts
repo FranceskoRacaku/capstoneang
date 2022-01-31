@@ -2,18 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PurchaseService } from '../purchase.service';
 import { Purchase } from './purchase.model';
+import { Fund } from 'src/app/fundsPlace/fund/fund.model';
+import { FundService } from 'src/app/fundsPlace/fund.service';
+import { FundComponent } from 'src/app/fundsPlace/fund/fund.component';
 
 @Component({
   selector: 'app-purchase',
   templateUrl: './purchase.component.html',
   styleUrls: ['./purchase.component.scss']
 })
+
+
 export class PurchaseComponent implements OnInit {
+
 
   purchase:Purchase = {
     id: 0,
     amount: 0,
-    fundId: 0,
+    fundId: [{
+      fundId: 0,
+      fundName: '',
+      fundSymbol: ''
+    }],
     userId: 0,
   };
 
