@@ -388,10 +388,20 @@
               {{fund.action}}
           </td> -->
           <td>
-          <div id="button_div">
-              <button (click) = "deleteFunds(fund.id)" id = "wrapper" class="shadow" value="Shadow">delete</button>
+          <div class= ".ie-container">
+            <div class= "invest-delete">
+              <img src='/assets/purchase.png' class="investImg"  >
+            <div>
+              Start Invest
+            </div>
+          </div>
+          <div class= "invest-delete">
+            <img src='/assets/delete.png' class="deleteImg" (click) = "deleteFunds(fund.id)">
+          <div>
+            Delete
               </div>
-              
+              </div>
+            </div>
           </td>
           
       </tr>

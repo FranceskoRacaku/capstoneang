@@ -3,7 +3,7 @@
 <hr>
 <header> <h1 id="title">Closed-End Funds</h1>
 
-  <h2 id= "sub-title" > Explore Purchases
+  <h2 id= "sub-title" > Explore Users
   </h2>
 </header>
 <hr>
@@ -66,12 +66,12 @@
           showDiv.userName = false;
           showDiv.userEmail = false;
           showDiv.userAge = false;">
-            <img src='/assets/asc.png'  
+            <img src='/assets/desc.png'  
             *ngIf=" showDiv.id"  
-            class ="asc">
+            class ="asc2">
             <img src='/assets/desc.png'  
             *ngIf="!showDiv.id" 
-            class ="desc">            
+            class ="desc2">            
             <p> ID</p>
          </th>
          <th tabindex ="0" role="button" scope ="col" [appSort]="users" data-order="asc" data-name="userName" 
@@ -79,12 +79,12 @@
          showDiv.id = false;
          showDiv.userEmail = false;
          showDiv.userAge = false;">
-           <img src='/assets/asc.png'  
+           <img src='/assets/desc.png'  
            *ngIf=" showDiv.userName"  
-           class ="asc">
+           class ="asc3">
            <img src='/assets/desc.png'  
            *ngIf="!showDiv.userName" 
-           class ="desc">        
+           class ="desc3">        
            <p>Name </p>
           </th>
           <th tabindex ="0" role="button" scope ="col" [appSort]="users" data-order="asc" data-name="userEmail" 
@@ -92,12 +92,12 @@
           showDiv.userName = false;
           showDiv.id = false;
           showDiv.userAge = false;">
-            <img src='/assets/asc.png'  
+            <img src='/assets/desc.png'  
             *ngIf=" showDiv.userEmail"  
-            class ="asc">
+            class ="asc4">
             <img src='/assets/desc.png'  
             *ngIf="!showDiv.userEmail" 
-            class ="desc">     
+            class ="desc4">     
             <p> Email</p>
           </th>
           <th tabindex ="0" role="button" scope ="col" [appSort]="users" data-order="asc" data-name="userAge" 
@@ -105,12 +105,12 @@
           showDiv.userName = false;
           showDiv.userEmail = false;
           showDiv.id = false;">
-            <img src='/assets/asc.png'  
+            <img src='/assets/desc.png'  
             *ngIf=" showDiv.userAge"  
-            class ="asc">
+            class ="asc4">
             <img src='/assets/desc.png'  
             *ngIf="!showDiv.userAge" 
-            class ="desc">      
+            class ="desc4">      
             <p> Age</p>
           </th>
           <th>

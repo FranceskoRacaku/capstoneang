@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Fund } from './fund/fund.model';
 
 @Injectable({
@@ -21,8 +21,8 @@ export class FundService {
 
   getFunds(): Observable<any> {
     return this.http.get("https://francs.herokuapp.com/funds");
-
   }
+  
   updateFunds(fund: Fund): Observable<any>{
     
     return this.http.patch(`https://francs.herokuapp.com/funds/${fund.id}`, fund);

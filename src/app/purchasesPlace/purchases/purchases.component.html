@@ -66,12 +66,12 @@
           showDiv.amount = false;
           showDiv.fundId = false;
           showDiv.userId = false;">
-            <img src='/assets/asc.png'  
+            <img src='/assets/desc.png'  
             *ngIf=" showDiv.id"  
-            class ="asc">
+            class ="asc2">
             <img src='/assets/desc.png'  
             *ngIf="!showDiv.id" 
-            class ="desc">            
+            class ="desc2">            
             <p> ID</p>
          </th>
          <th tabindex ="0" role="button" scope ="col" [appSort]="purchases" data-order="asc" data-name="amount" 
@@ -79,12 +79,12 @@
          showDiv.id = false;
          showDiv.fundId = false;
          showDiv.userId = false;">
-           <img src='/assets/asc.png'  
+           <img src='/assets/desc.png'  
            *ngIf=" showDiv.amount"  
-           class ="asc">
+           class ="asc3">
            <img src='/assets/desc.png'  
            *ngIf="!showDiv.amount" 
-           class ="desc">            
+           class ="desc3">            
            <p> Amount </p>
           </th>
           <th tabindex ="0" role="button" scope ="col" [appSort]="purchases" data-order="asc" data-name="fundId" 
@@ -92,12 +92,12 @@
           showDiv.amount = false;
           showDiv.id = false;
           showDiv.userId = false;">
-            <img src='/assets/asc.png'  
+            <img src='/assets/desc.png'  
             *ngIf=" showDiv.fundId"  
-            class ="asc">
+            class ="asc4">
             <img src='/assets/desc.png'  
             *ngIf="!showDiv.fundId" 
-            class ="desc">            
+            class ="desc4">            
             <p> Fund ID</p>
           </th>
           <th tabindex ="0" role="button" scope ="col" [appSort]="purchases" data-order="asc" data-name="userId" 
@@ -105,12 +105,12 @@
           showDiv.amount = false;
           showDiv.fundId = false;
           showDiv.id = false;">
-            <img src='/assets/asc.png'  
+            <img src='/assets/desc.png'  
             *ngIf=" showDiv.userId"  
-            class ="asc">
+            class ="asc4">
             <img src='/assets/desc.png'  
             *ngIf="!showDiv.userId" 
-            class ="desc">            
+            class ="desc4">            
             <p> User ID</p>
           </th>
           <th>
