@@ -83,9 +83,14 @@ fund:Fund = {
 }
 
   deleteFunds(id: number){
+    if(confirm("Are you sure you want to delete this item?") == true){
     this.fundService.deleteFunds(id).subscribe(data =>{
       this.ngOnInit();
       })
+    }
+    else{
+      
+    }
     }
 
     onPageChanged(event: any){

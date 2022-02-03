@@ -43,6 +43,7 @@ export class CreatePurchasesComponent implements OnInit {
 
   createPurchases(createPurchase: any){
     createPurchase.fundId = this.fund.id;
+    if(confirm("Are you sure you want to delete this item?") == true){
     this.purchaseService.createPurchase(createPurchase).subscribe(data => {
       if (data){
         this.router.navigateByUrl("/purchases");
@@ -50,6 +51,10 @@ export class CreatePurchasesComponent implements OnInit {
       console.log("Purchase is Created ", data);
       this.ngOnInit();
     })
+  }
+  else{
+      
+  }
   }
 
 }

@@ -6,6 +6,7 @@
         <div class = "center" id = "centerText" id ="text">
             <p>Investing in:</p>
             <title> {{fund.name}}</title>
+             <h1 style="color: #8B0000">ID: {{fund.id}}</h1>
             <hr>
             <!-- ID: <input [(ngModel)] ="fund.id" id ="inputText" type = "text" value = "" placeholder="e.g. (John Smith)"/> -->
             <label>Symbol: </label>
@@ -46,7 +47,7 @@
          <input [(ngModel)] ="createPurchase.userId" id ="inputText" type = "number" value = "" placeholder="e.g. (1)"/>
          
         <div id="button_div">
-    <button (click) = "createPurchases(createPurchase)" id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow">Create</button> 
+    <button (click) = "createPurchases(createPurchase)" id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow">Buy</button> 
     <button id = "wrapper" class="shadow" value="Shadow" routerLink ='/purchases'>Go Back</button>
     </div>
     </div>
