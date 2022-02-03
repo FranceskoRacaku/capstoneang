@@ -1,20 +1,10 @@
+@import "/src/styles.scss";
 body{
 
     background: linear-gradient(to right, rgb(189, 186, 186), rgb(168, 165, 165));
 
 }
-.main-bond{
-    // background-color: blue;
-    background: linear-gradient(to right, rgb(189, 186, 186), rgb(168, 165, 165));
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    
-    // flex-wrap: inherit;
-}
+
 title{
     background-image: linear-gradient(to right, rgba(255, 94, 0, 0.82) , rgba(255, 191, 0, 0.943));
     color: rgb(27, 3, 3);
@@ -33,30 +23,37 @@ title{
     flex-direction: column;
     width: 50%;
     height: 100vh;
+    
 }
+.invest-btn {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: $rorange;
+    display: inline-block;
+  }
+  
+  .back-btn {
+
+    margin-top: 100px;
+    float: right;
+  }
 
 .bond-info-left {
+    top: 23%;
+    right: 90%;
     position: absolute;
     padding-top: 20px;
-    height: 250px;
-    width: 400px;
+    height: 350px;
+    width: 450px;
     background-color: white;
     margin-right: auto;
     border-bottom: 1px solid black;
+
 }
-
-.bond-info-right {
-    position: absolute;
-    padding-top: 20px;
-    height: 414px;
-    width: 400px;
-    // background-color: black;
-    padding-right: 10px;
-    
-    margin-left: auto;
-    resize: auto;
-    border-bottom: 1px solid black;
-
+.bond-info-left p{
+    font-size: 22px;
 }
 button{
     cursor: pointer;
@@ -69,7 +66,6 @@ hr {
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
     'Lucida Sans', Arial, sans-serif;
-    font-size: 15px;
     font-weight: bold;
     padding-left: 30px;
     margin: 5px;
@@ -88,69 +84,102 @@ h3 {
     padding-left: 10px;
 }
 
-.image-one {
-    max-height: 100%;
-    max-width: 100%;
-    padding-top: 70px;
-    
-}
 
-.invest-btn {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    background-color: orange;
-    display: inline-block;
-}
-
-.back-btn {
-    margin-top: 10px;
-    float: right;
-}
-
-
-#gridContainer {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-auto-rows: 1fr;
-    grid-gap: 10px;
-    align-items: center;
-	flex-direction: row;
-	justify-content: center;
-    height: 800px; 
-    
-}
-#gridContainer > div {
-    border: 2px solid rgb(243, 5, 5);
-    background-color: rgb(1, 2, 1);
-    border-radius: 25px;
-    margin: 40px 55px 20px 20px;
-    padding: 55px;
-    width: 170px;
-    height: 65px;
-    color: white;
-}
-  //container Size
-  .funds-container {
-    background-color: rgb(58, 38, 43, 0.9);
-    height: auto;
-    width: 700px;
-    margin: auto;
-    flex-direction: column;
+.fundsedit{
     justify-content: center;
-    border-radius: 20px;
-    align-items: center;
-    display : flex;
-    overflow: auto;
-  }
-  
-  .funds-for-maps{
+    height: 100vh;
     display: flex;
-    margin: auto;
-    font-weight: 700;
+    background: linear-gradient(to right, rgb(189, 186, 186), rgb(168, 165, 165));
+}
+
+
+#text2{
+    margin-top:240px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    display : flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 50px 10px 50px;
+}
+
+.center{
+    display: block;
+    width: 1000px;
+    margin-top: 20px;
+
+
+}
+
+label{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+input {
+    font-size : 1.5em;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+#text{
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputText{
+    font-weight: 500;
+    color: rgb(209, 160, 27);
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.fundInfo{
+    bottom: 32%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 280px;
+}
+
+.fundInfo p{
+    width: 350px;
+}
+
+.fundInfo input{
+    width: 350px;
+}
+p{
+    font-size: 36px;
+    font-weight: 900;
+}
+title{
+    background-image: linear-gradient(to right, rgba(255, 94, 0, 0.82) , rgba(255, 191, 0, 0.943));
+    color: rgb(27, 3, 3);
+    align-items: center;
+    font-size: 36px;
+    flex-direction: column;
+    display: flex;
+    resize: both;
     
+  }
+
+.investImg{
+    position: absolute;
+      top: 350px;
+      left: 25%;
+      width: 250px;
+      height: 250px;
+}.image-one{
+
+      position: absolute;
+      top: 10px;
+      left: -25%;
+      width: 250px;
+      height: 250px;
   }

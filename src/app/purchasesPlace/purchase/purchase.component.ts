@@ -15,29 +15,34 @@ import { FundComponent } from 'src/app/fundsPlace/fund/fund.component';
 
 export class PurchaseComponent implements OnInit {
 
+  funds: Fund[] =[];
+
 
   purchase:Purchase = {
     id: 0,
     amount: 0,
-    fundId: [{
-      fundId: 0,
-      fundName: '',
-      fundSymbol: ''
-    }],
+    fundId: 0,
     userId: 0,
   };
 
   constructor(private route:ActivatedRoute, 
     private purchaseService: PurchaseService,
+    private fundService: FundService,
     private router: Router,
     ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params=>{
-      const myid = +params['id'];
+      var myid = +params['id'];
       this.purchaseService.getPurchase(myid).subscribe(payload=>{
         console.log(payload);
         this.purchase = payload;
+      })
+
+      this.fundService.getFunds().subscribe(payload=>{
+        console.log("This Fund", payload);
+        this.funds = payload;
+        
       })
     })
   }

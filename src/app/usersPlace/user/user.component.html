@@ -3,16 +3,14 @@
 
 
     <!-- bonds -->
-    <title> Users</title>
+    <title> Profile </title>
     <hr>
     <div class="main-bond">
         <!-- main bond -->
-        <div class="bond-info">
-            <!-- bond info  -->
-            <div class="bond-info-right">
-                <img class="image-one"src="./assets/undraw_our_solution_re_8yk6.svg" alt="image">
+
+
                 <div class="bond-info-left">
-                    <h3> Purchase History </h3>
+                    <h3> User Info </h3>
                     <hr>
                     <p> Id - {{user.id}}</p>
                     <hr>
@@ -23,14 +21,34 @@
                     <p> Age - {{user.userAge}} </p>
 
                     <button mat-raised-button class="invest-btn" (click) = "edit()">
-                     Edit Purchase
+                     Edit Info
                      </button>
                      <button mat-raised-button class="back-btn" routerLink="/users">
                          Go Back
                      </button>
-                 </div>
-             </div>
             </div>
+
             
+            <div class ="purchases-list">
+                <h3> Purchase List </h3>
+            </div>
+
+            
+    </div>
+
+    <div class="grid-container" id="gridContainer">
+        
+        <div *ngFor="let purchase of purchases">
+    
+            
+
+            <a *ngIf ="(user.id == purchase.userId)" [routerLink]="['/purchases', purchase.id]"> ID- {{purchase.id}} <br> Amount- {{purchase.amount}}
+                <br>Fund ID- {{purchase.fundId}}
+            </a>
+
+
+        </div>
+
+
     </div>
     </body>

@@ -1,6 +1,6 @@
 export interface Purchase {
     id: number,
     amount: number,
-    fundId: [{}],
+    fundId: number,
     userId: number,
 }

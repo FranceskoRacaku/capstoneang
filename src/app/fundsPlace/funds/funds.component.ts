@@ -51,7 +51,11 @@ showDiv = {
   act : false,
   ed : false,
 }
-
+fund:Fund = {
+  id: 0,
+  symbol: '',
+  name: ''
+};
   // this should be in hte dyn-table.component.ts
   sortChanged(e: any) {
     // save cookie with table sort data here
@@ -77,7 +81,6 @@ showDiv = {
     })
   })
 }
-
 
   deleteFunds(id: number){
     this.fundService.deleteFunds(id).subscribe(data =>{

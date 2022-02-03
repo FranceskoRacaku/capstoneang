@@ -390,13 +390,13 @@
           <td>
           <div class= ".ie-container">
             <div class= "invest-delete">
-              <img src='/assets/purchase.png' class="investImg"  >
+              <img src='/assets/purchase.png' class="investImg"  [routerLink]="['/funds/', fund.id, 'create']">
             <div>
               Start Invest
             </div>
           </div>
           <div class= "invest-delete">
-            <img src='/assets/delete.png' class="deleteImg" (click) = "deleteFunds(fund.id)">
+            <img src='/assets/delete.png' class="deleteImg" onclick="return deleteFunds('Are you sure you want to delete this item?');" (click) = "deleteFunds(fund.id)">
           <div>
             Delete
               </div>
