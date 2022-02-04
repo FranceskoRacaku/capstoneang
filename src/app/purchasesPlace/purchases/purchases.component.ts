@@ -14,20 +14,19 @@ export class PurchasesComponent implements OnInit {
   public directionLinks: boolean = true;
   public autoHide: boolean = false;
   public responsive: boolean = true;
-  public changeText: boolean;
 
-  public labels: any = {
-      previousLabel: '<--',
-      nextLabel: '-->',
-      screenReaderPaginationLabel: 'Pagination',
-      screenReaderPageLabel: 'page',
-      screenReaderCurrentLabel: `You're on page`
-  };
+  // public labels: any = {
+  //     previousLabel: '<--',
+  //     nextLabel: '-->',
+  //     screenReaderPaginationLabel: 'Pagination',
+  //     screenReaderPageLabel: 'page',
+  //     screenReaderCurrentLabel: `You're on page`
+  // };
 
 
   constructor(private router: Router, 
     private purchaseService: PurchaseService, 
-    private route: ActivatedRoute) { this.changeText = false; }
+    private route: ActivatedRoute) {}
 
 
   config: any;

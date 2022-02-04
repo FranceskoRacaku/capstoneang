@@ -7,6 +7,7 @@ import { Purchase } from './purchase/purchase.model';
   providedIn: 'root'
 })
 export class PurchaseService {
+  this: any;
 
   constructor(private http:HttpClient) { }
 

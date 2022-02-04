@@ -13,13 +13,7 @@
 <div class="imagee">
   <img src='/assets/searchIcon.png' class ="imgg">
   <input type="text"  id="myInput" placeholder="Search for purchases.." [(ngModel)]="term">
-  <div id="button_div1">
-    <p>
-     <a routerLink="/purchases/create">
-        <button type = "button" id = "wrapper2" class="shadow" value="Shadow">Make Purchase</button></a>
-      </p>
-    </div>
-
+</div>
     
         <div style="text-align:center">
             <pagination-template #p="paginationApi" [id]="config.id" (pageChange)="config.currentPage = $event">
@@ -49,7 +43,7 @@
           
             </pagination-template>
             </div>
-    </div>
+  
   
 
 

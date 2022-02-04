@@ -23,9 +23,9 @@
                     <hr>
                     <p> User ID - {{purchase.userId}} </p>
 
-                    <button mat-raised-button class="invest-btn" (click) = "edit()">
+                    <!-- <button mat-raised-button class="invest-btn" (click) = "edit()">
                      Edit Purchase
-                     </button>
+                     </button> -->
                      <button mat-raised-button class="back-btn" routerLink="/purchases">
                          Go Back
                      </button>
@@ -33,7 +33,7 @@
             </div>
             <img src='/assets/plain-arrow.png' class="investImg">
            
-           <div *ngFor="let fund of funds" class = "center" id = "centerText" id ="text">
+           <div *ngFor="let fund of funds"  id ="text">
                <div *ngIf ="(purchase.fundId == fund.id)" >
 
                 <div class= "fundInfo">

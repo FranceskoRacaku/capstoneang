@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { User } from './user.model';
 import { PurchaseService } from 'src/app/purchasesPlace/purchase.service';
@@ -18,6 +18,12 @@ export class UserComponent implements OnInit {
 
   purchases: Purchase[] =[];
 
+  purchase: Purchase = {
+    id: 0,
+    amount: 0,
+    userId:0,
+    fundId: 0
+  };
   user: User = {
     id: 0,
     userName: '',
@@ -43,12 +49,13 @@ export class UserComponent implements OnInit {
       // this.purchases.id = myid
       // console.log("this is the ID", this.purchase.fundId)
       this.purchaseService.getPurchases().subscribe(payload=>{
-        console.log("This Fund", payload);
         this.purchases = payload;
-        
+        console.log("purchase", payload)
       })
+
     })
   }
+
 
     edit():void {
       this.router.navigateByUrl(`/users/${this.user.id}/edit`);
