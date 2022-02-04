@@ -21,11 +21,11 @@ export class UserComponent implements OnInit {
   purchase: Purchase = {
     id: 0,
     amount: 0,
-    userId:0,
+    userId: '',
     fundId: 0
   };
   user: User = {
-    id: 0,
+    id: '',
     userName: '',
     userEmail: '',
     userAge: 0,
@@ -48,11 +48,12 @@ export class UserComponent implements OnInit {
 
       // this.purchases.id = myid
       // console.log("this is the ID", this.purchase.fundId)
-      this.purchaseService.getPurchases().subscribe(payload=>{
+      
+      this.purchaseService.getPurchasesByUser(myid).subscribe(payload=>{
         this.purchases = payload;
         console.log("purchase", payload)
       })
-
+    
     })
   }
 

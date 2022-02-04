@@ -13,7 +13,7 @@ export class EditUsersComponent implements OnInit {
 
 
   user: User = {
-    id: 0,
+    id: '',
     userName: '',
     userEmail:'',
     userAge: 0,
