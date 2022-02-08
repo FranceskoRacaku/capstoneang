@@ -12,25 +12,25 @@ export class UserService {
 
  
   createUser(createUser: any) {
-    return this.http.post('https://francs.herokuapp.com/users', createUser);
+    return this.http.post('https://indcapstone.herokuapp.com/users', createUser);
   }
 
   deletePurchases(id: any) {
-    return this.http.delete(`https://francs.herokuapp.com/users/${id}`,{responseType: 'text'});
+    return this.http.delete(`https://indcapstone.herokuapp.com/users/${id}`,{responseType: 'text'});
   }
 
   getUsers(): Observable<any> {
-    return this.http.get("https://francs.herokuapp.com/users");
+    return this.http.get("https://indcapstone.herokuapp.com/users");
 
   }
   updateUsers(user: User): Observable<any>{
     
-    return this.http.patch(`https://francs.herokuapp.com/users/${user.id}`, user);
+    return this.http.patch(`https://indcapstone.herokuapp.com/users/${user.id}`, user);
   }
 
 
   getUser(id: number): Observable<any> {
-    return this.http.get("https://francs.herokuapp.com/users/"+id);
+    return this.http.get("https://indcapstone.herokuapp.com//users/"+id);
 
   }
 

@@ -1,50 +1,105 @@
 <body>
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container bootstrap snippets bootdey">
+        <button style="color: black; background-color: orange" routerLink ='/funds'>Back to Funds</button> 
+    <div class="row">
+      <div class="profile-nav col-md-3">
+          <div class="panel">
+              <div class="user-heading round">
+                  <a href="#">
+                      <img src="https://cdn4.iconfinder.com/data/icons/professions-1-2/151/44-512.png" alt="">
+                  </a>
+                  <h1>{{user.userName}}</h1>
+                  <p>{{ user.userEmail}}</p>
+              </div>
     
-
-
-    <!-- bonds -->
-    <title> Profile </title>
-    <hr>
-    <div class="main-bond">
-        <!-- main bond -->
-
-
-                <div class="bond-info-left">
-                    <h3> User Info </h3>
-                    <hr>
-                    <p> Id - {{user.id}}</p>
-                    <hr>
-                    <p> Username - {{user.userName}}</p>
-                    <hr>
-                    <p> Email - {{user.userEmail }}</p>
-                    <hr>
-                    <p> Age - {{user.userAge}} </p>
-
-                    <button mat-raised-button class="invest-btn" (click) = "edit()">
-                     Edit Info
-                     </button>
-                     <button mat-raised-button class="back-btn" routerLink="/users">
-                         Go Back
-                     </button> 
-                     <div class ="purchases-list">
-                     <h3> Purchase List </h3></div>
-            </div>
-    </div>
-
-    <div class="grid-container" id="gridContainer">
-        
-        <div *ngFor="let purchase of purchases">
+              <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
+                  <li><a href="#"> <i class="fa fa-calendar"></i> Recent Activity <span class="label label-warning pull-right r-activity">9</span></a></li>
+                  <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="profile-info col-md-9">
+          <div class="panel">
+              <form>
+                  <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
+              </form>
+              <footer class="panel-footer">
+                  <button class="btn btn-warning pull-right">Post</button>
+                  <ul class="nav nav-pills">
+                      <li>
+                          <a href="#"><i class="fa fa-map-marker"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-camera"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class=" fa fa-film"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-microphone"></i></a>
+                      </li>
+                  </ul>
+              </footer>
+          </div>
+          <div class="panel">
+              <div class="bio-graph-heading">
+                  Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ispum. Aliquam ac magna metus.
+              </div>
+              <div class="panel-body bio-graph-info">
+                  <h1>Bio Graph</h1>
+                  <div class="row">
+                      <div class="bio-row">
+                          <p><span>ID </span>: {{ user.id }}</p>
+                      </div>
+                      <div class="bio-row">
+                          <p><span>Full Name </span>: {{ user.userName }}</p>
+                      </div>
+                      <div class="bio-row">
+                          <p><span>Age </span>: {{user.userAge}}</p>
+                      </div>
+                      <div class="bio-row">
+                          <p><span>Email</span>: {{user.userEmail}}</p>
+                      </div>
+                      <!-- 
+                      
+                      <div class="bio-row">
+                          <p><span>Occupation </span>: UI Designer</p>
+                      </div>
+                      <div class="bio-row">
+                          <p><span>Email </span>: test@ok.com</p>
+                      </div>
+                      <div class="bio-row">
+                          <p><span>Mobile </span>: 911</p>
+                      </div>
+                      <div class="bio-row">
+                          <p><span>Phone </span>: 119</p>
+                      </div>
+                  </div> -->
     
-            
+                  <button mat-raised-button class="invest-btn" (click) = "edit()">
+                    Edit Info
+                    </button>
+                    <button mat-raised-button class="back-btn" routerLink="/users">
+                        Go Back
+                    </button> 
 
-            <a *ngIf ="(user.id == purchase.userId)" [routerLink]="['/purchases', purchase.id]"> ID- {{purchase.id}} <br> Amount- {{purchase.amount}}
-                <br>Fund ID- {{purchase.fundId}}
-            </a>
-            
+    
+                  <div class="purchase">
+                    <h5>Purchases</h5>
+                </div>
+    
+    
+              <div class="grid-container" id="gridContainer">
+                <div *ngFor="let purchase of purchases">
+    
+                    <a *ngIf ="(user.id == purchase.userId)" [routerLink]="['/purchases', purchase.id]"> ID- {{purchase.id}} <br> Amount- {{purchase.amount}}
+                        <br>Fund ID- {{purchase.fundId}}
+                    </a>
+    </div>     
+</div>        
 
-
-        </div>
-
-
-    </div>
-    </body>
