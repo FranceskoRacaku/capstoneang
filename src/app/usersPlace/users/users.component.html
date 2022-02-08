@@ -15,7 +15,7 @@
   <input type="text"  id="myInput" placeholder="Search for users.." [(ngModel)]="term">
     </div>
 
-    
+    <button style="color: black; background-color: orange" routerLink ='/users'>Profile</button>
         <div style="text-align:center">
             <pagination-template #p="paginationApi" [id]="config.id" (pageChange)="config.currentPage = $event">
           
@@ -45,7 +45,7 @@
             </pagination-template>
             </div>
 
-  
+            <button style="color: black; background-color: orange" routerLink ='/users/create'>Create</button>
 
 
 

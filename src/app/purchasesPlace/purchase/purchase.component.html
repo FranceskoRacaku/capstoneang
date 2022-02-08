@@ -23,10 +23,10 @@
                     <hr>
                     <p> User ID - {{purchase.userId}} </p>
 
-                    <!-- <button mat-raised-button class="invest-btn" (click) = "edit()">
-                     Edit Purchase
-                     </button> -->
-                     <button mat-raised-button class="back-btn" routerLink="/purchases">
+                    <button mat-raised-button class="back-btn" style="color: rgb(5, 4, 1); background-color: rgb(255, 115, 22);" (click) = "sellFund(purchase.id)">
+                        Sell
+                    </button>
+                     <button mat-raised-button class="back-btn" style="color: orange; background-color: black; float: left;" [routerLink]="['/users/', purchase.userId]">
                          Go Back
                      </button>
                     

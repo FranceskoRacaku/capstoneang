@@ -15,7 +15,7 @@
         
         <div id="button_div">
     <button (click) = "update()" id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow">Update User</button> 
-    <button id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow" routerLink ='/users'>Go Back</button>
+    <button id = "wrapper" class="shadow" value="Shadow"id = "wrapper" class="shadow" value="Shadow" [routerLink]="['/users/', user.id]">Go Back</button>
     </div>
     </div>
     

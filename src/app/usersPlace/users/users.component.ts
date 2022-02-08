@@ -71,9 +71,15 @@ showDiv = {
 
 
   deleteUsers(id: number){
+    if(confirm("Are you sure you want to delete this purchase?") == true){
     this.userService.deletePurchases(id).subscribe(data =>{
       this.ngOnInit();
       })
+    }
+    else
+    {
+      
+    }
     }
 
     onPageChanged(event: any){

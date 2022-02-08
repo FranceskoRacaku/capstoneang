@@ -30,7 +30,7 @@ export class UserService {
 
 
   getUser(id: number): Observable<any> {
-    return this.http.get("https://indcapstone.herokuapp.com//users/"+id);
+    return this.http.get("https://indcapstone.herokuapp.com/users/"+id);
 
   }
 

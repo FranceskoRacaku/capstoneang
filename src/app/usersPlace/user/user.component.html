@@ -64,6 +64,11 @@
                       </div>
                       <div class="bio-row">
                           <p><span>Email</span>: {{user.userEmail}}</p>
+                          
+                    <button mat-raised-button class="invest-btn" (click) = "edit()">
+                    Edit Info
+                    </button>
+
                       </div>
                       <!-- 
                       
@@ -81,12 +86,7 @@
                       </div>
                   </div> -->
     
-                  <button mat-raised-button class="invest-btn" (click) = "edit()">
-                    Edit Info
-                    </button>
-                    <button mat-raised-button class="back-btn" routerLink="/users">
-                        Go Back
-                    </button> 
+                  
 
     
                   <div class="purchase">

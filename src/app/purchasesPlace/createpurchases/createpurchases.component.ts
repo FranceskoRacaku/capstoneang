@@ -24,6 +24,7 @@ export class CreatePurchasesComponent implements OnInit {
     userId: '',
 
   }
+
   constructor(private router: Router,
     private fundService: FundService, 
     private purchaseService: PurchaseService, 
@@ -43,10 +44,10 @@ export class CreatePurchasesComponent implements OnInit {
 
   createPurchases(createPurchase: any){
     createPurchase.fundId = this.fund.id;
-    if(confirm("Are you sure you want to delete this item?") == true){
+    if(confirm("Please Accept Invest") == true){
     this.purchaseService.createPurchase(createPurchase).subscribe(data => {
       if (data){
-        this.router.navigateByUrl("/purchases");
+        this.router.navigateByUrl(`/users/${this.createPurchase.userId}`);
       }
       console.log("Purchase is Created ", data);
       this.ngOnInit();
