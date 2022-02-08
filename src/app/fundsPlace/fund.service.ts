@@ -12,7 +12,7 @@ export class FundService {
 
  
   createFund(createFund: any) {
-    return this.http.post('https://francs.herokuapp.com/funds', createFund);
+    return this.http.post('https://francs.herokuapp.com/funds', createFund, {responseType: 'text'});
   }
 
   deleteFunds(id: any) {
