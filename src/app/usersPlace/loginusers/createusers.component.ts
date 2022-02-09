@@ -9,12 +9,18 @@ import { UserService } from 'src/app/usersPlace/user.service';
   templateUrl: './createusers.component.html',
   styleUrls: ['./createusers.component.scss']
 })
-export class CreateUsersComponent implements OnInit {
+export class LoginUsersComponent implements OnInit {
+  loginObj: { userName: string; userEmail: string } = {
+    userName: '',
+    userEmail: '',
+  };
 
-  user: any={}
-  userName: string = '';
-  userEmail: string = '';
-
+  user: User = {
+    id: '',
+    userName: '',
+    userEmail:'',
+    userAge: 0,
+  };
   createUser: any ={
     amount: '',
     fundId: '',
@@ -29,12 +35,11 @@ export class CreateUsersComponent implements OnInit {
   }
 
 
-  createUsers(createUser: any){
-    this.userService.createUser(createUser).subscribe(data => {
-      this.createUser.id = this.user.id
-      if (data){
-        this.router.navigateByUrl(`/users/${this.user.id}`);
-        console.log("navigating to", this.user.id)
+  login(){
+    this.userService.login(this.loginObj).subscribe((data: any)=>{
+      if (data.body.status === 'success'){
+        // this.user.id = this.createUser.userId;
+        this.router.navigateByUrl("/profile");
       }
       console.log("User is Created ", data);
       this.ngOnInit();

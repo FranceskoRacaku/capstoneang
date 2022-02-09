@@ -31,6 +31,10 @@ export class UserComponent implements OnInit {
     userAge: 0,
   };
 
+  users: any={}
+  userName: string = '';
+  userEmail: string = '';
+
   constructor(private route:ActivatedRoute, 
     private userService: UserService,
     private purchaseService: PurchaseService,

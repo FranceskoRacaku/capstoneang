@@ -1,7 +1,7 @@
 <body>
 
+    <a class="butn" href="/users/login">Log Out</a>
 
-    <button style="color: black; background-color: orange" routerLink ='/users/login'>Logout</button> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <div class="container bootstrap snippets bootdey">
         <button style="color: black; background-color: orange" routerLink ='/funds'>Back to Funds</button> 
@@ -12,8 +12,8 @@
                   <a href="#">
                       <img src="https://cdn4.iconfinder.com/data/icons/professions-1-2/151/44-512.png" alt="">
                   </a>
-                  <h1>{{user.userName}}</h1>
-                  <p>{{ user.userEmail}}</p>
+                  <h1>{{ this.userName }}</h1>
+                  <p>{{ this.userEmail }}@pk.com</p>
               </div>
     
               <ul class="nav nav-pills nav-stacked">
@@ -54,24 +54,17 @@
                   <h1>Bio Graph</h1>
                   <div class="row">
                       <div class="bio-row">
-                          <p><span>ID </span>: {{ user.id }}</p>
+                          <p><span>Name</span>: {{ this.userName }}</p>
                       </div>
                       <div class="bio-row">
-                          <p><span>Full Name </span>: {{ user.userName }}</p>
+                          <p><span>Email</span>: {{ this.userEmail }}</p>
+                      </div>
+                      <!-- <div class="bio-row">
+                          <p><span>Country </span>: USA</p>
                       </div>
                       <div class="bio-row">
-                          <p><span>Age </span>: {{user.userAge}}</p>
+                          <p><span>Birthday</span>: 13 July 1983</p>
                       </div>
-                      <div class="bio-row">
-                          <p><span>Email</span>: {{user.userEmail}}</p>
-                          
-                    <button mat-raised-button class="invest-btn" (click) = "edit()">
-                    Edit Info
-                    </button>
-
-                      </div>
-                      <!-- 
-                      
                       <div class="bio-row">
                           <p><span>Occupation </span>: UI Designer</p>
                       </div>
@@ -86,8 +79,6 @@
                       </div>
                   </div> -->
     
-                  
-
     
                   <div class="purchase">
                     <h5>Purchases</h5>
@@ -97,9 +88,10 @@
               <div class="grid-container" id="gridContainer">
                 <div *ngFor="let purchase of purchases">
     
-                    <a *ngIf ="(user.id == purchase.userId)" [routerLink]="['/purchases', purchase.id]"> ID- {{purchase.id}} <br> Amount- {{purchase.amount}}
+                    <a [routerLink]="['/purchases', purchase.id]"> ID- {{purchase.id}} <br> Amount- {{purchase.amount}}
                         <br>Fund ID- {{purchase.fundId}}
-                    </a>
-    </div>     
-</div>        
-
+                        </a>
+    </div>
+    
+    </div>             
+    

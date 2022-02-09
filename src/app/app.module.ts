@@ -19,6 +19,8 @@ import { EditFundsComponent } from './fundsPlace/editfunds/editfunds.component';
 import { CreateFundsComponent } from './fundsPlace/createfunds/createfunds.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SortDirective } from './directive/sort.directive';
+import { LoginUsersComponent } from './usersPlace/loginusers/createusers.component';
+import { UserpComponent } from './usersPlace/userProfile/userp.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { SortDirective } from './directive/sort.directive';
     CreatePurchasesComponent,
     EditFundsComponent,
     CreateFundsComponent,
-    SortDirective
+    SortDirective,
+    LoginUsersComponent,
+    UserpComponent
   ],
   imports: [
     BrowserModule,

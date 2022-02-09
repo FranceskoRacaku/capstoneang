@@ -12,7 +12,8 @@ import { UserComponent } from './usersPlace/user/user.component';
 import { CreateUsersComponent } from './usersPlace/createusers/createusers.component';
 import { EditUsersComponent } from './usersPlace/editusers/editusers.component';
 import { HomeComponent } from './home/home.component';
-
+import { LoginUsersComponent } from './usersPlace/loginusers/createusers.component';
+import { UserpComponent } from './usersPlace/userProfile/userp.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -21,10 +22,12 @@ const routes: Routes = [
   {path: "funds/:id", component: FundComponent},
   {path: "funds/:id/edit", component: EditFundsComponent},
   {path: "funds/:id/create", component: CreatePurchasesComponent},
+  {path: "profile", component: UserComponent},
   {path: "purchases", component: PurchasesComponent},
   {path: "purchases/:id", component: PurchaseComponent},
   // {path: "purchases/:id/edit", component: EditPurchasesComponent},
   {path: "users", component: UsersComponent},
+  {path: "users/login", component: LoginUsersComponent},
   {path: "users/create", component: CreateUsersComponent},
   {path: "users/:id", component: UserComponent},
   {path: "users/:id/edit", component: EditUsersComponent},
