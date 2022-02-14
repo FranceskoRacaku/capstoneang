@@ -1,25 +1,25 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-// import { FundComponent } from './fund.component';
+import { FundComponent } from './fund.component';
 
-// describe('FundComponent', () => {
-//   let component: FundComponent;
-//   let fixture: ComponentFixture<FundComponent>;
+describe('FundComponent', () => {
+  let component: FundComponent;
+  let fixture: ComponentFixture<FundComponent>;
 
-//   beforeEach(async () => {
-//     await TestBed.configureTestingModule({
-//       declarations: [ FundComponent ]
-//     })
-//     .compileComponents();
-//   });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ FundComponent ]
+    })
+    .compileComponents();
+  });
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(FundComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FundComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

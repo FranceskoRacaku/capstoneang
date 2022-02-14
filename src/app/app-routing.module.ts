@@ -12,19 +12,22 @@ import { UserComponent } from './usersPlace/user/user.component';
 import { CreateUsersComponent } from './usersPlace/createusers/createusers.component';
 import { EditUsersComponent } from './usersPlace/editusers/editusers.component';
 import { HomeComponent } from './home/home.component';
-import { LoginUsersComponent } from './usersPlace/loginusers/createusers.component';
+import { LoginUsersComponent } from './usersPlace/loginusers/loginusers.component';
 import { UserpComponent } from './usersPlace/userProfile/userp.component';
+import { CefComponent } from './cefProfile/cef.component';
+import { CefSellComponent } from './cefSellProfile/cefSell/cefSell.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "funds", component: FundsComponent},
+  {path: "cefProfile", component: CefComponent },
   {path: "funds/create", component: CreateFundsComponent},
   {path: "funds/:id", component: FundComponent},
   {path: "funds/:id/edit", component: EditFundsComponent},
   {path: "funds/:id/create", component: CreatePurchasesComponent},
-  {path: "profile", component: UserComponent},
-  {path: "purchases", component: PurchasesComponent},
-  {path: "purchases/:id", component: PurchaseComponent},
+  { path: 'purchases', component: PurchasesComponent },
+  { path: 'purchases/:id', component: PurchaseComponent },
+  { path: 'sells/:id', component: CefSellComponent },
   // {path: "purchases/:id/edit", component: EditPurchasesComponent},
   {path: "users", component: UsersComponent},
   {path: "users/login", component: LoginUsersComponent},

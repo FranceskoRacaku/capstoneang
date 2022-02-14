@@ -5,9 +5,9 @@ import { UserService } from 'src/app/usersPlace/user.service';
 
 
 @Component({
-  selector: 'app-createusers',
-  templateUrl: './createusers.component.html',
-  styleUrls: ['./createusers.component.scss']
+  selector: 'app-loginusers',
+  templateUrl: './loginusers.component.html',
+  styleUrls: ['./loginusers.component.scss']
 })
 export class LoginUsersComponent implements OnInit {
   loginObj: { userName: string; userEmail: string } = {

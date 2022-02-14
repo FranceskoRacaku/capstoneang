@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Purchase } from './purchase/purchase.model';
+import { Sell } from './cefSell/cefSell.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PurchaseService {
+export class SellService {
   this: any;
 
   constructor(private http:HttpClient) { }
@@ -18,26 +18,26 @@ export class PurchaseService {
     withCredentials: true,
     observe: 'response' as 'response',
   };
-  createPurchase(createPurchase: any) {
-    return this.http.post('https://francs.herokuapp.com/purchases', createPurchase, this.httpOptions);
+  createSell(createSell: any) {
+    return this.http.post('https://francs.herokuapp.com/sells', createSell, this.httpOptions);
   }
 
-  deletePurchases(id: any) {
-    return this.http.delete(`https://francs.herokuapp.com/purchases/${id}`,{responseType: 'text'});
+  deleteSells(id: any) {
+    return this.http.delete(`https://francs.herokuapp.com/sells/${id}`,{responseType: 'text'});
   }
 
-  getPurchases(): Observable<any> {
-    return this.http.get("https://francs.herokuapp.com/purchases");
+  getSells(): Observable<any> {
+    return this.http.get("https://francs.herokuapp.com/sells");
 
   }
 
-  getPurchasesByUser(id: any): Observable<any> {
-    return this.http.get(`https://francs.herokuapp.com/purchases/user/${id}`);
+  getSellsByUser(id: any): Observable<any> {
+    return this.http.get(`https://francs.herokuapp.com/sells/user/${id}`);
 
   }
-  updatePurchases(purchase: Purchase): Observable<any>{
+  updateSells(sell: Sell): Observable<any>{
     
-    return this.http.patch(`https://francs.herokuapp.com/purchases/${purchase.id}`, purchase);
+    return this.http.patch(`https://francs.herokuapp.com/sells/${sell.id}`, sell);
   }
 
 
