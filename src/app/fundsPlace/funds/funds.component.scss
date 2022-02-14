@@ -1,14 +1,28 @@
+@import "../../../styles.scss";
+
 
 body, html{  
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, rgb(189, 186, 186), rgb(168, 165, 165));
+
 
 
 }
 
+body::before{
+  content: "";
+  width: 100vw;
+  height: 45vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, $dorange, white);
+  z-index: -10;
+}
+
+
 header {
-  background-image: linear-gradient(to right, rgba(255, 94, 0, 0.82) , rgba(255, 191, 0, 0.943));
+
   margin: 0;
   padding-bottom: 20px;
 
@@ -23,8 +37,10 @@ header {
 
 }
 title{
-  background-color: rgb(184, 181, 177);
-  color: rgb(27, 3, 3);
+
+
+  margin-top: 2rem;
+  color: $color--dark;
   align-items: center;
   font-size: 72px;
   flex-direction: column;
@@ -33,7 +49,7 @@ title{
   
 }
 h1 {
-  color: rgb(0, 0, 0);
+  color: $color--dark;
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -54,7 +70,7 @@ hr{
 
 
 h2{
-  color: rgb(0, 0, 0);
+  color: $color--dark;
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -111,6 +127,7 @@ button{
    z-index: 2;
 
 }
+
 #gridContainer{
   
   display: flex;
@@ -119,6 +136,7 @@ button{
   overflow-x: scroll;
   
 }
+
 .imagee{
   position: relative;   
 
@@ -139,10 +157,15 @@ button{
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 2px solid rgb(247, 243, 243); /* Add a grey border */
+  border-radius: 5px;
   margin-top: 55px;
   margin-bottom: 12px; /* Add some space below the input */
 }
 
+.profileButton{
+  color: black; 
+  background-color: $lorange;
+}
 th, td {
   padding: 4px;
 }
@@ -640,6 +663,9 @@ table {
     background-color: #ffffffbd;
     flex-grow: 3!important;
     max-width: 320px!important;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-x: auto;
     text-align: left;
     font-family: FortBold,MYingHeiHK-Medium,Arial,sans-serif;
     font-size: 16px;
@@ -653,7 +679,7 @@ table {
         position: sticky;
         top: 0;
         z-index: 1;
-        background-color: rgb(0, 0, 0);
+        background-color: $color--dark;
      }
   }
 
@@ -663,7 +689,7 @@ table {
     padding:0 25px 0 20px;
   }
   table th {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid $color--dark;
     padding:0 25px 0 20px;
   }
 
@@ -727,7 +753,7 @@ table {
    text-align:center;
    height: 30px;
    width:125px;	
-   color: rgb(0, 0, 0);
+   color: $color--dark;
    margin: 0 10px 10px 10px;
    font-size: 18px;
    
@@ -744,18 +770,22 @@ table {
   font-size:18px;
   }
 
-#button_div1 {
-  position:relative;
-  margin-left:81%;
-  margin-right: 31%;
-}
-#button_div .shadow
+button{
+  position:absolute;
+  padding: 10px;
+  width: 95px;
+  margin-top: -20px;
+  margin-left: 17%;
+    
+  }
+
+button.shadow
 {
  background-color:#000000;
  transition: all 0.35s ease;
  border-radius:5px;
 }
-#button_div .shadow:hover
+button.shadow:hover
 {
  border: 1px solid #b7110b;
  background-color:white;
@@ -763,17 +793,11 @@ table {
  box-shadow:0px 0px 25px 0px #B7950B;
 }
 
-#button_div1 .shadow
-{
- background-color:#ffc14d;
- transition: all 0.35s ease;
- border-radius:5px;
-}
-#button_div1 .shadow:hover
+button:hover
 {
  border: 1px solid #b7110b;
  background-color:white;
- color:#B7950B;
+ color:#0ba3b7;
  box-shadow:0px 0px 25px 0px #B7950B;
 }
 
@@ -781,8 +805,10 @@ table {
   display: inline-block;
   position: relative;
   /* padding: 5px 12px; */
-  background: #ffc401;
+  background: $lorange;
   margin: 0px 4px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 25px;
 }
 
@@ -903,7 +929,7 @@ select {
   margin-left: 15px;
   position: relative;
   cursor: pointer;
-  background-color:#ffc039;
+  background-color: $lorange;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A@{arrow}%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
   background-position: right 10px center;
   background-repeat: no-repeat;

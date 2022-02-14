@@ -21,7 +21,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { SortDirective } from './directive/sort.directive';
 import { LoginUsersComponent } from './usersPlace/loginusers/createusers.component';
 import { UserpComponent } from './usersPlace/userProfile/userp.component';
-
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,8 @@ import { UserpComponent } from './usersPlace/userProfile/userp.component';
     CreateFundsComponent,
     SortDirective,
     LoginUsersComponent,
-    UserpComponent
+    UserpComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
