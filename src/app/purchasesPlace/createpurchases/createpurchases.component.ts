@@ -62,39 +62,57 @@ export class CreatePurchasesComponent implements OnInit {
 // }
 
 
-  createPurchases(createPurchase: any){
-    createPurchase.fundId = this.fund.id;
-    createPurchase.userId = this.user.uniqueID;
+createPurchases(createPurchase: any){
+  createPurchase.fundId = this.fund.id;
+  if(confirm("Please Accept Invest") == true){
+  this.purchaseService.createPurchase(createPurchase).subscribe(data => {
+    if (data){
+      this.router.navigateByUrl(`/users/${this.createPurchase.userId}`);
+    }
+    console.log("Purchase is Created ", data);
+    this.ngOnInit();
+  })
+}
+else{
+    
+}
+}
+
+}
+
+  // createPurchases(createPurchase: any){
+  //   createPurchase.fundId = this.fund.id;
+  //   createPurchase.userId = this.user.uniqueID;
     // console.log('this is the user Id', this.user.uniqueID)
     // console.log('this is the fund Id', this.fund.id)
     // console.log('this is the amount ', this.createPurchase.amount)
-    if(this.balance < this.createPurchase.amount){
-      alert("Not Enough Balance");
-    }
-    else{
-    if(confirm(`Please Accept Invest for this Amount $${this.createPurchase.amount}` ) == true){
-      console.log("this is balance", this.balance, "this is the amount", this.createPurchase.amount)
-    this.purchaseService.createPurchase(createPurchase).subscribe(data => {
+    // if(this.balance < this.createPurchase.amount){
+    //   alert("Not Enough Balance");
+    // }
+    // else{
+    // if(confirm(`Please Accept Invest for this Amount $${this.createPurchase.amount}` ) == true){
+    //   console.log("this is balance", this.balance, "this is the amount", this.createPurchase.amount)
+    // this.purchaseService.createPurchase(createPurchase).subscribe(data => {
 
-      // this.userService.postBalance({change: -createPurchase.amount}).subscribe(data=>{
-      //   console.log("this is the data", data)
+    //   // this.userService.postBalance({change: -createPurchase.amount}).subscribe(data=>{
+    //   //   console.log("this is the data", data)
 
-      // console.log("this is getting created",data )
-      // console.log("this purchast is being made", data)
+    //   // console.log("this is getting created",data )
+    //   // console.log("this purchast is being made", data)
     
-      if (data){
-        this.router.navigateByUrl("/account");
-      }
-      console.log("Purchase is Created ", data);
-      this.ngOnInit();
+    //   if (data){
+    //     this.router.navigateByUrl("/account");
+    //   }
+    //   console.log("Purchase is Created ", data);
+    //   this.ngOnInit();
     // })      
-  })
-  }
+//   })
+//   }
 
-  // else{
+//   // else{
       
-  // }}
-  }
+//   // }}
+//   }
  
- }
-}
+//  }
+// }
