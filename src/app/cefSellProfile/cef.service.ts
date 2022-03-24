@@ -18,33 +18,63 @@ export class SellService {
     withCredentials: true,
     observe: 'response' as 'response',
   };
+
   createSell(createSell: any) {
-    return this.http.post('https://francs.herokuapp.com/sells', createSell, this.httpOptions);
+    return this.http.post('https://manythtry.herokuapp.com/sells', createSell, this.httpOptions);
   }
 
   deleteSells(id: any) {
-    return this.http.delete(`https://francs.herokuapp.com/sells/${id}`,{responseType: 'text'});
+    return this.http.delete(`https://manythtry.herokuapp.com/sells/${id}`,{responseType: 'text'});
   }
 
   getSells(): Observable<any> {
-    return this.http.get("https://francs.herokuapp.com/sells");
+    return this.http.get("https://manythtry.herokuapp.com/sells");
 
   }
 
   getSellsByUser(id: any): Observable<any> {
-    return this.http.get(`https://francs.herokuapp.com/sells/user/${id}`);
+    return this.http.get(`https://manythtry.herokuapp.com/sells/user/${id}`);
 
   }
   updateSells(sell: Sell): Observable<any>{
     
-    return this.http.patch(`https://francs.herokuapp.com/sells/${sell.id}`, sell);
+    return this.http.patch(`https://manythtry.herokuapp.com/sells/${sell.id}`, sell);
   }
 
 
   getPurchase(id: number): Observable<any> {
-    return this.http.get("https://francs.herokuapp.com/purchases/"+id);
+    return this.http.get("https://manythtry.herokuapp.com/purchases/"+id);
 
   }
+
+  // createSell(createSell: any) {
+  //   return this.http.post('https://francs.herokuapp.com/sells', createSell, this.httpOptions);
+  // }
+
+  // deleteSells(id: any) {
+  //   return this.http.delete(`https://francs.herokuapp.com/sells/${id}`,{responseType: 'text'});
+  // }
+
+  // getSells(): Observable<any> {
+  //   return this.http.get("https://francs.herokuapp.com/sells");
+
+  // }
+
+  // getSellsByUser(id: any): Observable<any> {
+  //   return this.http.get(`https://francs.herokuapp.com/sells/user/${id}`);
+
+  // }
+  // updateSells(sell: Sell): Observable<any>{
+    
+  //   return this.http.patch(`https://francs.herokuapp.com/sells/${sell.id}`, sell);
+  // }
+
+
+  // getPurchase(id: number): Observable<any> {
+  //   return this.http.get("https://francs.herokuapp.com/purchases/"+id);
+
+  // }
+  
 //**************************************************************************************** */
   //   createPurchase(createPurchase: any) {
   //   return this.http.post('http://localhost:3000/purchases', createPurchase);
